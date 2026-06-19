@@ -28,6 +28,7 @@ async def home(request: Request):
         request=request,
         name="index.html",
         context={
+            "request": request,
             "active_page": "home"
         }
     )
@@ -41,6 +42,7 @@ async def about(request: Request):
         request=request,
         name="about.html",
         context={
+            "request": request,
             "active_page": "about"
         }
     )
@@ -54,6 +56,7 @@ async def services(request: Request):
         request=request,
         name="services.html",
         context={
+            "request": request,
             "active_page": "services"
         }
     )
@@ -67,6 +70,7 @@ async def contact(request: Request):
         request=request,
         name="contact.html",
         context={
+            "request": request,
             "active_page": "contact"
         }
     )
