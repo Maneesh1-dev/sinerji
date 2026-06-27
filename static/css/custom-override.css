@@ -7,7 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap");
 
 /* ---- CSS VARIABLES ---- */
-:root {
+/* :root {
   --ve-dark:      #220018;
   --ve-dark2:     #3A0A2B;
   --ve-navy:     #220018;
@@ -20,8 +20,46 @@
   --ve-radius:   12px;
   --ve-shadow:   0 8px 30px rgba(13,27,42,0.10);
   --ve-trans:    all 0.3s ease;
-}
+} */
+/* ===== PREMIUM BRAND COLORS (SINERJI KALITE) ===== */
+/* ===== PREMIUM + BRIGHT VERSION ===== */
+/* ===== LIGHT LUXURY DARK ===== */
 
+:root{
+
+  /* Background */
+  --ve-dark:      #171316;   /* Warm luxury dark */
+  --ve-dark2:     #221C20;   /* Elevated sections */
+  --ve-navy:      #8B3F66;   /* Logo-inspired accent */
+
+  /* Brand */
+  --ve-gold:      #d4a017;   /* Premium gold */
+  --ve-gold2:     #E5CC9A;   /* Champagne gold */
+
+  /* Light surfaces */
+  --ve-light:     #F5F1EA;   /* Premium ivory */
+  --ve-white:     #FFFFFF;
+
+  /* Typography */
+  --ve-text:      #7d7671;   /* Main text */
+  --ve-text-soft: #A89B98;   /* Secondary text */
+  --ve-heading:   #FFF8F2;   /* Heading */
+
+  /* UI */
+  --ve-border:#e2e8f0;
+
+  --ve-radius:    20px;
+
+  /* Premium shadow */
+  --ve-shadow:
+      0 20px 70px
+      rgba(0,0,0,.35);
+
+  /* Motion */
+  --ve-trans:
+      all .4s cubic-bezier(.22,.61,.36,1);
+
+}
 /* ---- RESET BODY FONTS ---- */
 body { font-family: 'DM Sans', sans-serif; color: var(--ve-text); }
 h1,h2,h3,h4,h5,h6 { font-family: 'Nunito', sans-serif; color: var(--ve-dark); }
@@ -217,6 +255,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Nunito', sans-serif; color: var(--ve-dark); }
    SERVICES GRID
    ============================================================ */
 .ve-services-section { background: var(--ve-light); }
+body { background: var(--ve-light); }
 .ve-services-grid {
   display:grid; grid-template-columns:repeat(3, 1fr);
   gap:28px;
@@ -298,7 +337,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Nunito', sans-serif; color: var(--ve-dark); }
 .ve-testi-stars { font-size:18px; color:var(--ve-gold); margin-bottom:16px; letter-spacing:2px; }
 .ve-testi-card > p { font-size:15px; line-height:1.8; color:var(--ve-text); margin-bottom:24px; font-style:italic; }
 .ve-testi-author { display:flex; align-items:center; gap:14px; }
-.ve-testi-avatar { width:50px; height:50px; border-radius:50%; background-size:cover; background-position:center; flex-shrink:0; }
+.ve-testi-avatar { width:150px; height:95px;  background-size:cover; background-position:center; flex-shrink:0; }
 .ve-testi-author strong { display:block; font-size:15px; font-weight:800; color:var(--ve-dark); }
 .ve-testi-author span { font-size:13px; color:var(--ve-text); }
 
