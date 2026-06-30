@@ -28,16 +28,16 @@
 :root{
 
   /* Background */
-  --ve-dark:      #171316;   /* Warm luxury dark */
-  --ve-dark2:     #221C20;   /* Elevated sections */
-  --ve-navy:      #8B3F66;   /* Logo-inspired accent */
+  --ve-dark:      #76184a;   /* Warm luxury dark */
+  --ve-dark2:     #76184a;   /* Elevated sections */
+  --ve-navy:      #76184a;   /* Logo-inspired accent */
 
   /* Brand */
-  --ve-gold:      #d4a017;   /* Premium gold */
-  --ve-gold2:     #E5CC9A;   /* Champagne gold */
+  --ve-gold:      #e5b73d;   /* Premium gold */
+  --ve-gold2:     #e5b73d;   /* Champagne gold */
 
   /* Light surfaces */
-  --ve-light:     #F5F1EA;   /* Premium ivory */
+  --ve-light:     #e5e3e0;   /* Premium ivory */
   --ve-white:     #FFFFFF;
 
   /* Typography */
