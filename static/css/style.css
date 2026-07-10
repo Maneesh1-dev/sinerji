@@ -2281,8 +2281,8 @@ h1, h2, h3, h4, h5, h6 {
             to bottom,
             #ffffff 0%,
             #ffffff 50%,
-            #faf7f2 50%,
-            #faf7f2 100%
+            #ffffff 50%,
+            #ffffff 100%
         );
 }
 
@@ -2391,6 +2391,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .ve-industry-content{
     padding:22px;
+    font-family: 'Nunito', sans-serif;
+     font-weight:1000;
 }
 
 .ve-industry-content h4{
@@ -2398,7 +2400,8 @@ h1, h2, h3, h4, h5, h6 {
 
     font-size:20px;
 
-    font-weight:600;
+   font-family: 'Nunito', sans-serif;
+     font-weight:1000;
 
     transition:.35s;
 }
@@ -2456,7 +2459,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   font-weight: bold;
   color: #fff;
-  background-color: #A71F65;
+  background-color: #25D366;
   border-radius: 20px;
   position: absolute;
   right: 70px;
@@ -2797,53 +2800,6 @@ width:100px;
 
 }
 
-.ve-services-detail-section{
-padding:100px 0;
-}
-
-.ve-services-detail-section img{
-border-radius:18px;
-box-shadow:0 20px 50px rgba(0,0,0,.08);
-}
-
-.ve-service-list{
-margin-top:20px;
-padding-left:0;
-list-style:none;
-}
-
-.ve-service-list li{
-padding:10px 0;
-border-bottom:1px solid #eee;
-position:relative;
-padding-left:28px;
-}
-
-.ve-service-list li::before{
-content:"✓";
-position:absolute;
-left:0;
-font-weight:700;
-color:#d6a64f;
-}
-
-.mb-100{
-margin-bottom:100px;
-}
-
-.ve-service-img{
-    width: 100%;
-    height: 400px;      /* same height for all */
-    object-fit: cover;  /* crop neatly */
-    border-radius: 12px;
-}
-
-@media (max-width: 991px){
-    .ve-service-img{
-        height: 280px;
-    }
-}
-
 html{
     scroll-behavior: smooth;
 }
@@ -2852,20 +2808,549 @@ html{
 [id]{
     scroll-margin-top: 120px;
 }
+/* ===========================
+   SERVICES SECTION
+=========================== */
+
+.ve-services-detail-section{
+    padding:110px 0;
+    background:
+        radial-gradient(circle at top right, rgba(212,160,23,.06), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(11,59,105,.05), transparent 28%),
+        #fafbfd;
+}
+
+/* ===========================
+   SERVICE CARD
+=========================== */
+
+.ve-service-card{
+    position:relative;
+    overflow:hidden;
+
+    background:rgba(255,255,255,.95);
+
+    border:1px solid rgba(15,23,42,.08);
+
+    border-radius:24px;
+
+    padding:40px;
+
+    box-shadow:
+        0 8px 30px rgba(15,23,42,.06),
+        0 2px 8px rgba(15,23,42,.04);
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:
+        transform .55s ease,
+        opacity .7s ease,
+        box-shadow .4s ease,
+        border-color .4s ease;
+}
+
+/* Gold Accent */
+
+.ve-service-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:5px;
+    height:100%;
+    background:linear-gradient(to bottom,#D4A017,#F2D06B);
+    transition:.35s;
+}
+
+.ve-service-card.show{
+    opacity:1;
+    transform:none;
+}
+
+.ve-service-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(212,160,23,.45);
+
+    box-shadow:
+        0 20px 60px rgba(15,23,42,.10);
+
+}
+
+.ve-service-card:hover::before{
+    width:8px;
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+
+.ve-service-img{
+
+    width:100%;
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    transition:
+        transform .7s ease,
+        filter .7s ease;
+
+}
+
+.ve-service-card:hover .ve-service-img{
+
+    transform:scale(1.04);
+
+    filter:brightness(1.04);
+
+}
+
+/* ===========================
+   HEADING
+=========================== */
+
+.ve-service-card h3{
+
+    font-size:34px;
+
+    font-weight:1000;
+
+    margin-bottom:18px;
+
+}
+
+.ve-service-card h3::after{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+
+    height:4px;
+
+    margin-top:14px;
+
+    border-radius:20px;
+
+    background:#D4A017;
+
+    transition:.35s;
+
+}
+
+.ve-service-card:hover h3::after{
+
+    width:120px;
+
+}
+
+/* ===========================
+   PARAGRAPH
+=========================== */
+
+.ve-service-card p{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#5B6470;
+
+}
+
+/* ===========================
+   SERVICE LIST
+=========================== */
+
+.ve-service-list{
+
+    margin-top:28px;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+.ve-service-list li{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:12px 0 12px 34px;
+
+    font-size:16px;
+
+    color:#404B5A;
+
+    transition:.3s;
+
+}
+
+.ve-service-list li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    width:22px;
+
+    height:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(212,160,23,.12);
+
+    color:#D4A017;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.ve-service-list li:hover{
+
+    color:#0B3B69;
+
+    transform:translateX(6px);
+
+}
+
+.ve-service-list li:hover::before{
+
+    background:#D4A017;
+
+    color:#fff;
+
+}
+
+/* ===========================
+   INDUSTRY IMAGE
+=========================== */
 
 .ve-industry-img{
+
     width:100%;
+
     height:250px;
+
     overflow:hidden;
+
+    border-radius:18px;
+
 }
 
 .ve-industry-img img{
+
     width:100%;
+
     height:100%;
+
     object-fit:cover;
-    display:block;
+
 }
 
 .ve-industry-img.travel img{
+
     object-position:top;
+
+}
+
+/* ===========================
+   SPACING
+=========================== */
+
+.mb-100{
+
+    margin-bottom:70px;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:991px){
+
+    .ve-service-card{
+
+        padding:28px;
+
+    }
+
+    .ve-service-img{
+
+        height:280px;
+
+        margin-bottom:30px;
+
+    }
+
+    .ve-service-card h3{
+
+        font-size:28px;
+
+    }
+
+}
+/*=========================================
+HOME SERVICES
+=========================================*/
+
+.ve-home-services-section{
+    padding:110px 0;
+    background:
+      radial-gradient(circle at top right, rgba(212,160,23,.06), transparent 28%),
+      radial-gradient(circle at bottom left, rgba(11,59,105,.05), transparent 28%),
+      #fafbfd;
+}
+.ve-home-services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:30px;
+}
+
+@media (max-width:991px){
+    .ve-home-services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (max-width:767px){
+    .ve-home-services-grid{
+        grid-template-columns:1fr;
+    }
+}
+.ve-home-services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:32px;
+}
+
+.ve-home-service-card{
+    display:flex;
+    flex-direction:column;
+
+    padding:42px;
+
+    min-height:380px;
+
+    background:#fff;
+
+    border-radius:26px;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    box-shadow:
+        0 10px 25px rgba(15,23,42,.05);
+
+    transition:.35s ease;
+
+    overflow:hidden;
+}
+
+.ve-home-service-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#D4A017;
+
+    box-shadow:
+        0 25px 60px rgba(15,23,42,.10);
+
+}
+.ve-home-service-card:hover::before{
+
+    width:8px;
+
+}
+.ve-home-card-link{
+
+    margin-top:auto;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+.ve-home-service-card p{
+
+    flex:1;
+
+    display:-webkit-box;
+
+    -webkit-line-clamp:4;
+
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+
+}
+.ve-home-service-card h4{
+
+    min-height:70px;
+
+    font-size:24px;
+
+    line-height:1.4;
+
+}
+/*=========================================
+ICON
+=========================================*/
+
+.ve-home-service-icon{
+
+    width:74px;
+
+    height:74px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:20px;
+
+    background:rgba(212,160,23,.10);
+
+    color:#D4A017;
+
+    font-size:32px;
+
+    margin-bottom:28px;
+
+    transition:.4s;
+
+}
+
+.ve-home-service-card:hover .ve-home-service-icon{
+
+    background:#D4A017;
+
+    color:#fff;
+
+    transform:rotate(-6deg) scale(1.08);
+
+}
+
+/*=========================================
+TITLE
+=========================================*/
+
+.ve-home-service-card h4{
+
+    font-size:26px;
+
+    font-weight:800;
+
+    margin-bottom:16px;
+
+    line-height:1.4;
+
+}
+
+/*=========================================
+DESCRIPTION
+=========================================*/
+
+.ve-home-service-card p{
+
+    color:#5D6774;
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+
+    flex-grow:1;
+
+}
+
+/*=========================================
+BUTTON
+=========================================*/
+
+.ve-home-card-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--ve-dark);;
+
+    text-decoration:none;
+
+    transition:.35s;
+    font-family:'Nunito',sans-serif; font-weight:900;
+
+}
+
+.ve-home-card-link i{
+
+    transition:.35s;
+    
+
+}
+
+.ve-home-card-link:hover{
+
+    color:#D4A017;
+    font-family:'Nunito',sans-serif; font-weight:900;
+
+}
+
+.ve-home-card-link:hover i{
+
+    transform:translateX(8px);
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:991px){
+
+    .ve-home-services-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:767px){
+
+    .ve-home-services-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
 }

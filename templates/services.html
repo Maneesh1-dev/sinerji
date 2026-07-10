@@ -24,7 +24,8 @@ Sinerji Kalite & Associates - Services
                 <p>You focus on business growth while we focus on your compliance part.</p>
             </div>
     <!-- Service 1 -->
-    <div id="taxation" class="row align-items-center mb-100">
+    <div class="ve-service-card mb-100">
+    <div id="taxation" class="row align-items-center ">
         <div class="col-lg-6">
             <img src="/static/img/services/tax.png" class="img-fluid rounded ve-service-img" alt="Direct & Indirect Taxation">
         </div>
@@ -43,9 +44,11 @@ Sinerji Kalite & Associates - Services
             </ul>
         </div>
     </div>
+    </div>
 
     <!-- Service 2 -->
-    <div id="rbi" class="row align-items-center flex-lg-row-reverse mb-100">
+     <div class="ve-service-card mb-100">
+    <div id="rbi" class="row align-items-center flex-lg-row-reverse ">
         <div class="col-lg-6">
             <img src="/static/img/services/RBI.png" class="img-fluid rounded ve-service-img" alt="RBI Compliance">
         </div>
@@ -59,9 +62,11 @@ Sinerji Kalite & Associates - Services
             </ul>
         </div>
     </div>
+    </div>
 
     <!-- Service 3 -->
-    <div id="roc" class="row align-items-center mb-100">
+    <div class="ve-service-card mb-100">
+    <div id="roc" class="row align-items-center">
         <div class="col-lg-6">
             <img src="/static/img/services/mca.png" class="img-fluid rounded ve-service-img" alt="MCA / ROC Compliances">
         </div>
@@ -76,10 +81,11 @@ Sinerji Kalite & Associates - Services
                 <li>LLP e-Filings</li>
             </ul>
         </div>
-    </div>
+    </div></div>
 
     <!-- Service 4 -->
-    <div id="audit" class="row align-items-center flex-lg-row-reverse mb-100">
+     <div class="ve-service-card mb-100">
+    <div id="audit" class="row align-items-center flex-lg-row-reverse ">
         <div class="col-lg-6">
             <img src="/static/img/services/Tax-bro.png" class="img-fluid rounded ve-service-img" alt="Audits">
         </div>
@@ -92,10 +98,11 @@ Sinerji Kalite & Associates - Services
                 <li>Interim Audit</li>
             </ul>
         </div>
-    </div>
+    </div></div>
 
     <!-- Service 5 -->
-    <div id="accounting" class="row align-items-center mb-100">
+     <div class="ve-service-card mb-100">
+    <div id="accounting" class="row align-items-center ">
         <div class="col-lg-6">
             <img src="/static/img/services/accounting.png" class="img-fluid rounded ve-service-img" alt="Accounting Compliances">
         </div>
@@ -111,9 +118,10 @@ Sinerji Kalite & Associates - Services
                 <li>Trade Receivables / Payables Management</li>
             </ul>
         </div>
-    </div>
+    </div></div>
 
     <!-- Service 6 -->
+     <div class="ve-service-card mb-100">
     <div id="consultancy" class="row align-items-center flex-lg-row-reverse">
         <div class="col-lg-6">
             <img src="/static/img/services/consulting.png" class="img-fluid rounded ve-service-img" alt="Consultancy & Management Services">
@@ -132,10 +140,22 @@ Sinerji Kalite & Associates - Services
                 <li>Halal License</li>
             </ul>
         </div>
-    </div>
+    </div></div>
 
 </div>
 
 
 </section>
+<script>const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+},{
+threshold:.15
+});
+
+document.querySelectorAll(".ve-service-card")
+.forEach(card=>observer.observe(card));</script>
     {% endblock %}
