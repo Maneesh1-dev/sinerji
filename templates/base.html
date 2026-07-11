@@ -298,7 +298,14 @@ id="whatsapp-float">
             </div>
         </div>
     </footer>
+    <script>
+    const companyStartYear = 2022; // Change this once
 
+    const currentYear = new Date().getFullYear();
+    const years = currentYear - companyStartYear;
+
+    document.getElementById("experience-years").textContent = years + "+";
+    </script>
     <!-- Scripts -->
     <script src="{{ url_for('static', path='js/jquery/jquery-2.2.4.min.js') }}"></script>
 

@@ -27,7 +27,7 @@ Sinerji Kalite & Associates - About
                     <div class="ve-about-img-stack">
                         <div class="ve-about-img-1 bg-img" style="background-image:url(/static/img/bg-img/14.jpg);"></div>
                         <div class="ve-about-img-2 bg-img" style="background-image:url(/static/img/bg-img/5.jpg);"></div>
-                        <div class="ve-about-ribbon"><strong>4+</strong><span>Years of Trust</span></div>
+                        <div class="ve-about-ribbon"><strong id="experience-years"></strong><span>Years of Trust</span></div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 wow fadeInRight" data-wow-delay="200ms">
@@ -42,33 +42,43 @@ Sinerji Kalite & Associates - About
             </div>
         </div>
     </section>
-
-    <!-- MISSION / VISION / VALUES -->
-    <section class="ve-mvv-section">
-        <div class="container">
-            <div class="ve-section-header text-center">
-                <span class="ve-section-tag">Our Foundation</span>
-                <h2>Mission, Vision &amp; <span>Values</span></h2>
-            </div>
-            <div class="ve-mvv-grid">
-                <div class="ve-mvv-card wow fadeInUp" data-wow-delay="100ms">
-                    <div class="ve-mvv-icon"><i class="fa fa-bullseye"></i></div>
-                    <h4>Our Mission</h4>
-                    <p>To protect stakeholder value by delivering rigorous, independent, and high-quality audits that cultivate trust and ensure absolute regulatory compliance.</p>
-                </div>
-                <div class="ve-mvv-card wow fadeInUp" data-wow-delay="250ms">
-                    <div class="ve-mvv-icon"><i class="fa fa-eye"></i></div>
-                    <h4>Our Vision</h4>
-                    <p>To be the most trusted voice in financial assurance, setting the standard for integrity, clarity, and governance in the financial ecosystem.</p>
-                </div>
-                <div class="ve-mvv-card wow fadeInUp" data-wow-delay="400ms">
-                    <div class="ve-mvv-icon"><i class="fa fa-heart"></i></div>
-                    <h4>Our Values</h4>
-                    <p>Transparency, Priority to clients requirements and an unwavering commitment to ethical financial practice.</p>
-                </div>
-            </div>
+<!-- MISSION / VISION / VALUES -->
+<section class="ve-mvv-section">
+    <div class="container">
+        <div class="ve-section-header text-center">
+            <span class="ve-section-tag">Our Foundation</span>
+            <h2>Mission, Vision &amp; <span>Values</span></h2>
         </div>
-    </section>
 
+        <div class="ve-mvv-grid">
+
+            <div class="ve-mvv-card wow fadeInUp" data-wow-delay="100ms">
+                <div class="ve-mvv-icon">
+                    <img src="{{ url_for('static', path='img/mission.png') }}" alt="Mission">
+                </div>
+                <h4>Our Mission</h4>
+                <p>To protect stakeholder value by delivering rigorous, independent, and high-quality audits that cultivate trust and ensure absolute regulatory compliance.</p>
+            </div>
+
+            <div class="ve-mvv-card wow fadeInUp" data-wow-delay="250ms">
+                <div class="ve-mvv-icon">
+                    <img src="{{ url_for('static', path='img/vission.png') }}" alt="Vision">
+                </div>
+                <h4>Our Vision</h4>
+                <p>To be the most trusted voice in financial assurance, setting the standard for integrity, clarity, and governance in the financial ecosystem.</p>
+            </div>
+
+            <div class="ve-mvv-card wow fadeInUp" data-wow-delay="400ms">
+                <div class="ve-mvv-icon">
+                    <img src="{{ url_for('static', path='img/values.png') }}" alt="Values">
+                </div>
+                <h4>Our Values</h4>
+                <p>Transparency, Priority to clients requirements and an unwavering commitment to ethical financial practice.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+    
 
         {% endblock %}
